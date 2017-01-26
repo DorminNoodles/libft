@@ -59,7 +59,7 @@ SRC_NAME =	ft_atoi.c		\
 			ft_strsub.c		\
 			ft_strtrim.c	\
 			ft_tolower.c	\
-			ft_toupper.c	
+			ft_toupper.c
 OBJ = $(SRC_NAME:.c=.o)
 SRCS = $(SRC_NAME)
 INC_DIR = includes/
@@ -67,7 +67,7 @@ FLAGS = -Wall -Wextra -Werror
 MAIN_TEST = main_test/
 
 all : $(NAME)
-	
+
 $(NAME) :
 	$(CC) -c $(SRCS) -I $(INC_DIR) $(FLAGS)
 	ar rc $(NAME) $(OBJ)
