@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/03 20:17:05 by lchety            #+#    #+#             */
-/*   Updated: 2016/11/28 12:08:08 by lchety           ###   ########.fr       */
+/*   Updated: 2017/01/29 17:41:13 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <wchar.h>
 
 struct		s_list
 {
@@ -70,6 +71,7 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_itoa(int n);
 void		ft_putchar(char c);
 void		ft_putstr(char const *s);
+void		ft_putwchar(wchar_t c);
 void		ft_putendl(char const *s);
 void		ft_putnbr(int n);
 void		ft_putchar_fd(char c, int fd);
