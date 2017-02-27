@@ -61,7 +61,7 @@ SRC_NAME =	ft_atoi.c		\
 			ft_strtrim.c	\
 			ft_tolower.c	\
 			ft_toupper.c	\
-			ft_wstrlen.c	
+			ft_wstrlen.c
 OBJ = $(SRC_NAME:.c=.o)
 SRCS = $(SRC_NAME)
 INC_DIR = includes/

@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
+/*   ft_putwstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/01 00:31:46 by lchety            #+#    #+#             */
-/*   Updated: 2017/02/27 12:28:19 by lchety           ###   ########.fr       */
+/*   Created: 2017/02/27 12:44:24 by lchety            #+#    #+#             */
+/*   Updated: 2017/02/27 12:45:57 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_wstrlen (const wchar_t *s)
+void	ft_putwstr(wchar_t *str)
 {
-    size_t length;
-
-    length = 0;
-    while (*(s + length) != '\0')
-        length++;
-
-    return (length);
+		while (str)
+		{
+			ft_putwchar(*str);
+			str++;
+		}
 }
