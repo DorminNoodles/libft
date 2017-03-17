@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/01 00:31:46 by lchety            #+#    #+#             */
-/*   Updated: 2017/02/27 12:28:19 by lchety           ###   ########.fr       */
+/*   Updated: 2017/03/17 17:26:25 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 size_t  ft_wstrlen (const wchar_t *s)
 {
-    size_t length;
+	size_t length;
 
-    length = 0;
-    while (*(s + length) != '\0')
-        length++;
-
-    return (length);
+	length = 0;
+	while (*(s + length) != '\0')
+		length++;
+	return (length);
 }
