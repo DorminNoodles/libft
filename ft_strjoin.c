@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/08 10:43:42 by lchety            #+#    #+#             */
-/*   Updated: 2017/01/04 16:14:26 by lchety           ###   ########.fr       */
+/*   Updated: 2017/03/30 16:18:53 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t size1;
-	size_t size2;
+	char	*str;
+	size_t	size1;
+	size_t	size2;
 
 	size1 = ft_strlen(s1);
 	size2 = ft_strlen(s2);
-
 	str = ft_strnew(size1 + size2);
 	if (str == NULL)
 		return (NULL);

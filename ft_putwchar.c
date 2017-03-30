@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/29 17:28:52 by lchety            #+#    #+#             */
-/*   Updated: 2017/02/27 12:43:08 by lchety           ###   ########.fr       */
+/*   Updated: 2017/03/30 16:18:22 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putwchar(wchar_t c)
 {
-	if (c <  0x7f)
+	if (c < 0x7f)
 		ft_putchar(c);
 	else if (c < 0x800)
 	{
