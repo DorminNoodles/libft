@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/08 10:43:42 by lchety            #+#    #+#             */
-/*   Updated: 2017/03/30 16:18:53 by lchety           ###   ########.fr       */
+/*   Updated: 2017/04/04 14:59:28 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (str == NULL)
 		return (NULL);
 	ft_memcpy(str, s1, size1);
-	str += size1;
-	ft_memcpy(str, s2, size2);
+	ft_memcpy(str + size1, s2, size2);
 	return (str);
 }
