@@ -1,5 +1,5 @@
 NAME = libft.a
-CC = gcc
+CC = clang
 EXEC = debug.exe
 SRC_DIR = srcs/
 SRC_NAME =	ft_atoi.c			\
@@ -65,9 +65,13 @@ SRC_NAME =	ft_atoi.c			\
 			ft_wstrlen.c		\
 			get_next_line.c
 
-OBJ = $(SRC_NAME:.c=.o)
-SRCS = $(SRC_NAME)
+HEADER =	libft.h				\
+			get_next_line.h
+
 INC_DIR = includes/
+HEADERS = $(addprefix $(INC_DIR), $(HEADER))
+OBJ = $(SRC_NAME:.c=.o)
+SRCS = SRCS = $(addprefix $(SRC_DIR), $(SRC_NAME))
 FLAGS = -Wall -Wextra -Werror
 MAIN_TEST = main_test/
 INC = -I $(INC_DIR)
@@ -75,11 +79,11 @@ INC = -I $(INC_DIR)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-#	$(CC) -c $(SRCS) -I $(INC_DIR) $(FLAGS)
-	ar rc $(NAME) $(OBJ)
+	ar -rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
-%.o : srcs/%.c
-	$(CC) -c $< -I .. -o $@
+%.o : %.c $(HEADERS)
+	$(CC) -c $< $(INC) -o $@
 
 clean :
 	rm -f $(OBJ)
