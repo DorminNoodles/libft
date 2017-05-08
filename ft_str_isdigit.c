@@ -6,13 +6,13 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/08 09:18:08 by lchety            #+#    #+#             */
-/*   Updated: 2017/05/08 09:22:29 by lchety           ###   ########.fr       */
+/*   Updated: 2017/05/08 11:56:28 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		str_isdigit(char *str)
+int		ft_str_isdigit(char *str)
 {
 	while (*str)
 	{
