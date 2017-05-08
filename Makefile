@@ -70,12 +70,16 @@ SRCS = $(SRC_NAME)
 INC_DIR = includes/
 FLAGS = -Wall -Wextra -Werror
 MAIN_TEST = main_test/
+INC = -I $(INC_DIR)
 
 all : $(NAME)
 
-$(NAME) :
-	$(CC) -c $(SRCS) -I $(INC_DIR) $(FLAGS)
+$(NAME) : $(OBJ)
+#	$(CC) -c $(SRCS) -I $(INC_DIR) $(FLAGS)
 	ar rc $(NAME) $(OBJ)
+
+%.o : srcs/%.c
+	$(CC) -c $< -I .. -o $@
 
 clean :
 	rm -f $(OBJ)
