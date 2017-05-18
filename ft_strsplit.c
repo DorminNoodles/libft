@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/08 14:04:04 by lchety            #+#    #+#             */
-/*   Updated: 2016/11/30 13:35:44 by lchety           ###   ########.fr       */
+/*   Updated: 2017/05/18 18:23:38 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char		**create_tab(int n)
 {
 	char **tab;
 
-	tab = (char**)malloc(sizeof(char *) * n + 1);
+	tab = (char**)malloc(sizeof(char *) * (n + 1));
 	if (tab == NULL)
 		return (NULL);
 	tab[n] = NULL;
