@@ -1,5 +1,5 @@
 NAME = libft.a
-CC = clang
+CC = gcc -g
 EXEC = debug.exe
 SRC_DIR = srcs/
 SRC_NAME =	ft_atoi.c			\
