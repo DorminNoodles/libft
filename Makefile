@@ -33,6 +33,7 @@ SRC_NAME =	ft_atoi.c			\
 			ft_putstr.c			\
 			ft_putwchar.c		\
 			ft_str_isdigit.c	\
+			ft_strargv.c		\
 			ft_putstr_fd.c		\
 			ft_strcat.c			\
 			ft_strchr.c			\

@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/03 20:17:05 by lchety            #+#    #+#             */
-/*   Updated: 2017/05/08 11:55:17 by lchety           ###   ########.fr       */
+/*   Updated: 2018/04/07 19:56:13 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void		ft_putchar(char c);
 void		ft_putstr(char const *s);
 void		ft_putwchar(wchar_t c);
 int			ft_str_isdigit(char *str);
+int			ft_strargv(int argc, char **argv, char *str);
 void		ft_putendl(char const *s);
 void		ft_putnbr(int n);
 void		ft_putchar_fd(char c, int fd);
