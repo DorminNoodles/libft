@@ -6,7 +6,7 @@
 /*   By: lchety <lchety@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/10 20:17:17 by lchety            #+#    #+#             */
-/*   Updated: 2016/11/30 11:03:02 by lchety           ###   ########.fr       */
+/*   Updated: 2018/08/28 21:05:25 by lchety           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *link;
 
-	link = (t_list *)malloc(sizeof(t_list));
-	if (link == NULL)
+	if(!(link = (t_list *)ft_memalloc(sizeof(t_list))))
 		return (NULL);
 	if (content != NULL)
 	{
-		link->content = ft_memalloc(sizeof(content) * content_size);
+		if(!(link->content = ft_memalloc(sizeof(content) * content_size)))
+		{
+			free(link);
+			return (NULL);
+		}
 		ft_memcpy(link->content, content, content_size);
 		link->content_size = content_size;
 	}
